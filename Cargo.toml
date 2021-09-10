@@ -1,5 +1,5 @@
 [package]
-name = "js8-event"
+name = "js8event"
 version = "0.1.0"
 authors = ["kyle"]
 edition = "2018"
