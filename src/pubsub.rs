@@ -1,6 +1,5 @@
 use crate::event::{JS8PubSub, JS8PubSubError, Event};
 use redis::{Commands, Client, Connection, ControlFlow, Msg, PubSubCommands, RedisError};
-use std::net::SocketAddr;
 
 
 /// JS8RedisPubSub
@@ -15,8 +14,8 @@ pub struct JS8RedisPubSub {
 /// 
 impl JS8RedisPubSub {
 
-    pub fn new(address: SocketAddr) -> Self {
-        let client = redis::Client::open(address.to_string()).unwrap();
+    pub fn new(address: String) -> Self {
+        let client = redis::Client::open(address).unwrap();
 
         Self {
             client
